@@ -3,6 +3,7 @@ import json
 import psutil
 import time
 import signal
+from socket import gethostname
 
 def closeConnection(sig, frame):
     producer.flush()
@@ -14,7 +15,8 @@ try:
     oldPacketsSent = psutil.net_io_counters().packets_sent
     time.sleep(1)
     producer = kp(bootstrap_servers=['localhost:9092'], value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-    pcID = int(input("Ingrese el id del equipo: "))
+    pcID = gethostname()
+    print(f"ID del equipo {pcID}")
 
     while True:
         actPacketsSent = psutil.net_io_counters().packets_sent
