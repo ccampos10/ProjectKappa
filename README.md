@@ -2,7 +2,7 @@
 Arquitectura Kappa usando Kafka para la ingesta y Spark para el procesamiento de datos
 (linux)
 ## Kafka
-Herramienta descargada desde [la pagina oficial] (https://kafka.apache.org/downloads) version 3.9.1, opcion binaria de Scala 2.13
+Herramienta descargada desde [la pagina oficial](https://kafka.apache.org/downloads) version 3.9.1, opcion binaria de Scala 2.13
 - Iniciar Zookeeper
 ```bash
 ./zookeeper-server-start.sh ../config/zookeeper.properties
@@ -16,9 +16,9 @@ Herramienta descargada desde [la pagina oficial] (https://kafka.apache.org/downl
 ./kafka-topics.sh --create --topic datos --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 ## Spark
-Herramienta descargada desde [la pagina oficial] (https://spark.apache.org/downloads.html) version 4.0.1.  
+Herramienta descargada desde [la pagina oficial](https://spark.apache.org/downloads.html) version 4.0.1.  
 Luego de descargar la herramienta, agregar la ruta /bin al path o variables de entorno
-## Recomendaciion
+## Recomendacion
 Despues de clonar el repositorio, abre una terminal en el archivo del repositorio y ejecutan
 ```bash
 python -m venv envKappa
